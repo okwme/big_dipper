@@ -9,11 +9,13 @@ export default class ValidatorTransactions extends Component{
     constructor(props){
         super(props);
         this.state = {
-            transferTxs: {},
-            stakingTxs: {},
+            transferTxs: this.props.slashingTxs,
+            stakingTxs: this.props.slashingTxs,
             distributionTxs: {},
             governanceTxs: {},
             slashingTxs: {},
+            updateQuoteTxs: {},
+            settleTradeTxs: {}
         };  
     }
 
@@ -26,7 +28,9 @@ export default class ValidatorTransactions extends Component{
                     stakingTxs: this.props.stakingTxs,
                     distributionTxs: this.props.distributionTxs,
                     governanceTxs: this.props.governanceTxs,
-                    slashingTxs: this.props.slashingTxs
+                    slashingTxs: this.props.slashingTxs,
+                    updateQuoteTxs: this.props.updateQuoteTxs,
+                    settleTradeTxs: this.props.settleTradeTxs,
                 })
             }
         }
@@ -43,6 +47,8 @@ export default class ValidatorTransactions extends Component{
                 distributionTxs={this.state.distributionTxs}
                 governanceTxs={this.state.governanceTxs}
                 slashingTxs={this.state.slashingTxs}
+                updateQuoteTxs={this.state.updateQuoteTxs}
+                settleTradeTxs={this.state.settleTradeTxs}
             />
         }
         else {

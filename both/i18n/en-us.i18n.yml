@@ -136,6 +136,8 @@ transactions:
     distribution: 'Distribution'
     governance: 'Governance'
     slashing: 'Slashing'
+    updateQuote: 'Update Quote'
+    settleTrade: 'Settle Trade'
 proposals:
     notFound: 'No proposal found.'
     listOfProposals: 'Here is a list of governance proposals.'
@@ -220,3 +222,5 @@ messageTypes:
     unjail: 'Unjail'
     IBCTransfer: 'IBC Transfer'
     IBCReceive: 'IBC Receive'
+    UpdateQuote: 'Updated a Quote'
+    SettleTrade: 'Settled a Trade'

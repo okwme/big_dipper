@@ -9,6 +9,7 @@ const fetchFromUrl = (url) => {
         };
     }
     catch (e){
+        console.log(`Failed to query ${url}`)
         console.log(e);
     }
 }
@@ -32,6 +33,7 @@ Meteor.methods({
             }
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e)
         }
     },
@@ -51,6 +53,7 @@ Meteor.methods({
             }
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e)
         }
 
@@ -63,6 +66,7 @@ Meteor.methods({
             }
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
         }
         // get unbonding
@@ -74,6 +78,7 @@ Meteor.methods({
             }
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
         }
 
@@ -86,6 +91,7 @@ Meteor.methods({
             }
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
         }
 
@@ -105,6 +111,7 @@ Meteor.methods({
 
             }
             catch (e){
+                console.log(`Failed to query ${url}`)
                 console.log(e)
             }
         }
@@ -159,6 +166,7 @@ Meteor.methods({
             };
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
         }
     },
@@ -173,6 +181,7 @@ Meteor.methods({
             };
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
         }
     },

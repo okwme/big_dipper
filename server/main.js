@@ -170,6 +170,7 @@ Meteor.startup(function(){
                 console.warn(`CHECK SETTINGS JSON: ${key} is missing from settings`)
                 Meteor.settings[key] = {};
             }
+            if (typeof DEFAULTSETTINGSJSON[key] !== 'object') return
             Object.keys(DEFAULTSETTINGSJSON[key]).forEach((param) => {
                 if (Meteor.settings[key][param] == undefined){
                     console.warn(`CHECK SETTINGS JSON: ${key}.${param} is missing from settings`)

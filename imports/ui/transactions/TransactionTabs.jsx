@@ -16,7 +16,10 @@ export default class TransactionTabs extends Component{
             stakingTxs: {},
             distributionTxs: {},
             governanceTxs: {},
-            slashingTxs: {}
+            slashingTxs: {},
+            updateQuoteTxs: {},
+            settleTradeTxs: {}
+
         }
     }
 
@@ -35,11 +38,12 @@ export default class TransactionTabs extends Component{
                 stakingTxs: this.props.stakingTxs,
                 distributionTxs: this.props.distributionTxs,
                 governanceTxs: this.props.governanceTxs,
-                slashingTxs: this.props.slashingTxs
+                slashingTxs: this.props.slashingTxs,
+                updateQuoteTxs: this.props.updateQuoteTxs,
+                settleTradeTxs: this.props.settleTradeTxs
             })    
         }
     }
-
     render(){
         return <Card>
             <CardHeader><T>transactions.transactions</T> <small>(<T>common.last</T> 100)</small></CardHeader>
@@ -80,9 +84,25 @@ export default class TransactionTabs extends Component{
                     <NavItem>
                         <NavLink
                             className={classnames({ active: this.state.activeTab === 'tx-slashing' })}
-                            onClick={() => { this.toggle('tx-slashing'); }}
+                            onClick={() => { this.toggle('tx-settleTrade'); }}
                         >
                             <T>transactions.slashing</T> ({numbro(this.state.slashingTxs.length).format("0,0")})
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === 'tx-updateQuote' })}
+                            onClick={() => { this.toggle('tx-updateQuote'); }}
+                        >
+                            <T>transactions.updateQuote</T> ({numbro(this.state.updateQuoteTxs.length).format("0,0")})
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === 'tx-settleTrade' })}
+                            onClick={() => { this.toggle('tx-settleTrade'); }}
+                        >
+                            <T>transactions.settleTrade</T> ({numbro(this.state.settleTradeTxs.length).format("0,0")})
                         </NavLink>
                     </NavItem>
                 </Nav>
@@ -147,6 +167,32 @@ export default class TransactionTabs extends Component{
                         <Row>
                             <Col>
                                 {(this.state.slashingTxs.length > 0)?this.state.slashingTxs.map((tx, i) => {
+                                    return <TransactionRow 
+                                        key={i} 
+                                        index={i} 
+                                        tx={tx} 
+                                        blockList
+                                    />
+                                }):''}
+                            </Col>
+                        </Row>
+                    </TabPane> <TabPane tabId="tx-updateQuote">
+                        <Row>
+                            <Col>
+                                {(this.state.updateQuoteTxs.length > 0)?this.state.updateQuoteTxs.map((tx, i) => {
+                                    return <TransactionRow 
+                                        key={i} 
+                                        index={i} 
+                                        tx={tx} 
+                                        blockList
+                                    />
+                                }):''}
+                            </Col>
+                        </Row>
+                    </TabPane> <TabPane tabId="tx-settleTrade">
+                        <Row>
+                            <Col>
+                                {(this.state.settleTradeTxs.length > 0)?this.state.settleTradeTxs.map((tx, i) => {
                                     return <TransactionRow 
                                         key={i} 
                                         index={i} 

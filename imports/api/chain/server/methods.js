@@ -37,6 +37,7 @@ Meteor.methods({
             }});
         }
         catch(e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
         }
     },
@@ -86,6 +87,7 @@ Meteor.methods({
                     chainStates.notBondedTokens = parseInt(bonding.not_bonded_tokens);
                 }
                 catch(e){
+                    console.log(`Failed to query ${url}`)
                     console.log(e);
                 }
 
@@ -104,6 +106,7 @@ Meteor.methods({
                     }
                 }
                 catch (e){
+                    console.log(`Failed to query ${url}`)
                     console.log(e)
                 }
 
@@ -116,6 +119,7 @@ Meteor.methods({
                     }
                 }
                 catch(e){
+                    console.log(`Failed to query ${url}`)
                     console.log(e);
                 }
 
@@ -128,6 +132,7 @@ Meteor.methods({
                     }
                 }
                 catch(e){
+                    console.log(`Failed to query ${url}`)
                     console.log(e);
                 }
 
@@ -141,6 +146,7 @@ Meteor.methods({
             return chain.latestBlockHeight;
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
             return "Error getting chain status.";
         }
@@ -239,7 +245,6 @@ Meteor.methods({
                     }
                 }
             }
-
             // read validators from previous chain
             console.log('read validators from previous chain');
             if (genesis.app_state.staking.validators && genesis.app_state.staking.validators.length > 0){

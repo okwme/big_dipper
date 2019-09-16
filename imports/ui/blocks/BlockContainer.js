@@ -77,5 +77,15 @@ export default BlockContainer = withTracker((props) => {
                 {"tx.value.msg.type":"cosmos-sdk/IBCReceiveMsg"}
             ]
         }).fetch() : {},
+        updateQuoteTxs: transactionsExist ? Transactions.find({
+            $or: [
+                {"tx.value.msg.type":"microtick/UpdateQuote"}
+            ]
+        }).fetch() : {},
+        settleTradeTxs: transactionsExist ? Transactions.find({
+            $or: [
+                {"tx.value.msg.type":"microtick/SettleTrade"}
+            ]
+        }).fetch() : {}
     };
 })(Block);

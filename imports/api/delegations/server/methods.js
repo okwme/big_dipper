@@ -23,6 +23,7 @@ Meteor.methods({
                     }
                 }
                 catch (e){
+                    console.log(`Failed to query ${url}`)
                     console.log(e);
                 }    
             }

@@ -7,8 +7,9 @@ import { Validators } from '../../validators/validators.js';
 Meteor.methods({
     'proposals.getProposals': function(){
         this.unblock();
+        let url
         try{
-            let url = LCD + '/gov/proposals';
+            url = LCD + '/gov/proposals';
             let response = HTTP.get(url);
             let proposals = JSON.parse(response.content).result;
             // console.log(proposals);
@@ -50,6 +51,7 @@ Meteor.methods({
             return true
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             console.log(e);
         }
     },
@@ -147,6 +149,7 @@ const getVoteDetail = (votes) => {
                 }
             }
             catch (e){
+                console.log(`Failed to query ${url}`)
                 console.log(e);
             }
             votingPowerMap[voter] = {votingPower: votingPower};

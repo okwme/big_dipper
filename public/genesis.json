@@ -1,0 +1,729 @@
+{
+  "genesis_time": "2019-09-14T17:00:00Z",
+  "chain_id": "mtzone-sep-2019-2",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age": "100000"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    }
+  },
+  "validators": [
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "x07ggf3krVgA33jaROOxzSNkgc3hRp/cnaUqWssbSBs="
+      },
+      "power": "10500",
+      "name": "localhost"
+    },
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "n8kXrYcPRrMo40DRC2wwA5wJYBmw3jfpMHbOq2mwXCM="
+      },
+      "power": "1000",
+      "name": "y3v63n"
+    }
+  ],
+  "app_hash": "",
+  "app_state": {
+    "accounts": [
+      {
+        "address": "cosmos1zvtlxceu4uqjd36gvml6snzr3pjuk08hpms9r6",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "1000.000000000000000000"
+        },
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1z0d007g5z6jll9fyflcczhku0dy9add3l82ge4",
+        "numquotes": 3,
+        "numtrades": 195,
+        "balance": {
+          "denom": "fox",
+          "amount": "969.529329686229369200"
+        },
+        "sequence_number": "200",
+        "account_number": "1",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1rz2x8xp28fwyrc3hfe9lud0yz4xv3wxymahlkp",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "1000.000000000000000000"
+        },
+        "sequence_number": "0",
+        "account_number": "18",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos19fmrxa667g7ac43et5egkstzz0g2ln5wpcawmv",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "1000.000000000000000000"
+        },
+        "sequence_number": "0",
+        "account_number": "2",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1xhejtplkesdt5epzga5ep9fe5fazw9sk0rkpu9",
+        "numquotes": 0,
+        "numtrades": 1,
+        "balance": {
+          "denom": "fox",
+          "amount": "999.963937167689735679"
+        },
+        "sequence_number": "1",
+        "account_number": "15",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos18lsh3dkpfmmx9mcn9s8vvmug50e0kncn6lzp5h",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "23000.000000000000000000"
+        },
+        "sequence_number": "4",
+        "account_number": "20",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1g784r57d3fgw4n0v6n6cuukgcgju2kv5y7kxpz",
+        "numquotes": 0,
+        "numtrades": 1,
+        "balance": {
+          "denom": "fox",
+          "amount": "999.241081324758626730"
+        },
+        "sequence_number": "1",
+        "account_number": "3",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos122cqzn0wwuj32ym38lmlr5mennhg23xcekwjm2",
+        "numquotes": 0,
+        "numtrades": 6,
+        "balance": {
+          "denom": "fox",
+          "amount": "1332.173170455259761157"
+        },
+        "sequence_number": "6",
+        "account_number": "4",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1tedf8rchxwq4r068gl26twzedtq7l32zft9ack",
+        "numquotes": 3,
+        "numtrades": 51,
+        "balance": {
+          "denom": "fox",
+          "amount": "974.275052241819195023"
+        },
+        "sequence_number": "55",
+        "account_number": "5",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1wkryl3myh94jfw48fx9dt68vs2xcg98r2h7rmv",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "604.000000000000000000"
+        },
+        "sequence_number": "7",
+        "account_number": "6",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos10rhtf4rqlgq9vwmjlsuaunecgtslhcxaqj8ycp",
+        "numquotes": 4,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "1005.202036934255422878"
+        },
+        "sequence_number": "8",
+        "account_number": "7",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos139kww9muz6kakjv4twgttgeg6cwcezzpxncz3z",
+        "numquotes": 20,
+        "numtrades": 56,
+        "balance": {
+          "denom": "fox",
+          "amount": "946.825375164147920820"
+        },
+        "sequence_number": "81",
+        "account_number": "16",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1jsy0teggc920z4hkg062pk5t493fjt7rzt38a3",
+        "numquotes": 10,
+        "numtrades": 5,
+        "balance": {
+          "denom": "fox",
+          "amount": "1016.556309354759848623"
+        },
+        "sequence_number": "15",
+        "account_number": "8",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos156fz759jw6j6ajgwsq9ej94anf4yrss0uuje4l",
+        "numquotes": 0,
+        "numtrades": 1,
+        "balance": {
+          "denom": "fox",
+          "amount": "1015.109302386297971487"
+        },
+        "sequence_number": "1",
+        "account_number": "22",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1klhwkm772kt92y8udt2cydc3m0en6n0tnc0e73",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "0.000000000000000000"
+        },
+        "sequence_number": "1",
+        "account_number": "9",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1htvlazaz0hpuau2vxujdg2u96mxrhqfu2a7585",
+        "numquotes": 0,
+        "numtrades": 6,
+        "balance": {
+          "denom": "fox",
+          "amount": "982.764603774302749805"
+        },
+        "sequence_number": "6",
+        "account_number": "10",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1cx5rrxmg4j68r3ys8r3h942e9hd4jelvlvjwqf",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "0.000000000000000000"
+        },
+        "sequence_number": "1",
+        "account_number": "23",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1e8wezl2fkw4prqtmzzrqlyjq73tc7prt2nvsun",
+        "numquotes": 1,
+        "numtrades": 13,
+        "balance": {
+          "denom": "fox",
+          "amount": "958.372545509702512587"
+        },
+        "sequence_number": "14",
+        "account_number": "11",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos16ns9k63mk28k4ygpvsr92rnpglctcqypzu0xyx",
+        "numquotes": 0,
+        "numtrades": 36,
+        "balance": {
+          "denom": "fox",
+          "amount": "1022.916858377356868516"
+        },
+        "sequence_number": "36",
+        "account_number": "17",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1uzspypun2sux3s6s8adwhlhw40h62tpnr38kq7",
+        "numquotes": 0,
+        "numtrades": 8,
+        "balance": {
+          "denom": "fox",
+          "amount": "1334.654651168210689054"
+        },
+        "sequence_number": "8",
+        "account_number": "12",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1unqrq3kgw8g5l5yvgryvvuh9zu3vxmg5ecq6ff",
+        "numquotes": 1,
+        "numtrades": 5,
+        "balance": {
+          "denom": "fox",
+          "amount": "988.099238977470562518"
+        },
+        "sequence_number": "6",
+        "account_number": "19",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1u47fngz8p24wd7y3cgzscrm9qusc8908mjr734",
+        "numquotes": 116,
+        "numtrades": 100,
+        "balance": {
+          "denom": "fox",
+          "amount": "9563.876969586039262798"
+        },
+        "sequence_number": "185119",
+        "account_number": "13",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1a5ylxkr2gu7dz0aj6dpe7ly0c3t70rm73md5p3",
+        "numquotes": 101,
+        "numtrades": 53,
+        "balance": {
+          "denom": "fox",
+          "amount": "10033.443573865374533814"
+        },
+        "sequence_number": "17392",
+        "account_number": "21",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1746cde6uj2zj36zy2qdvt4spdtcattl39v7cz6",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "927326.000000000000000000"
+        },
+        "sequence_number": "20",
+        "account_number": "14",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "auth": {
+      "collected_fees": null,
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      }
+    },
+    "bank": {
+      "send_enabled": true
+    },
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "988500",
+        "bonded_tokens": "11500"
+      },
+      "params": {
+        "unbonding_time": "259200000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "fox"
+      },
+      "last_total_power": "11500",
+      "last_validator_powers": [
+        {
+          "Address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "Power": "10500"
+        },
+        {
+          "Address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "Power": "1000"
+        }
+      ],
+      "validators": [
+        {
+          "operator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "consensus_pubkey": "cosmosvalconspub1zcjduepqca8wpq0aujk4sqxl0rdyfca3e53kfqwdu9rflhya55494jcmfqdszwnral",
+          "jailed": false,
+          "status": 2,
+          "tokens": "10500",
+          "delegator_shares": "10500.000000000000000000",
+          "description": {
+            "moniker": "microtick",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "rate": "0.100000000000000000",
+            "max_rate": "0.200000000000000000",
+            "max_change_rate": "0.010000000000000000",
+            "update_time": "2019-08-11T20:00:00Z"
+          },
+          "min_self_delegation": "1"
+        },
+        {
+          "operator_address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "consensus_pubkey": "cosmosvalconspub1zcjduepqnly30tv8partx28rgrgskmpsqwwqjcqekr0r06fswm82k6dsts3sx02cvp",
+          "jailed": false,
+          "status": 2,
+          "tokens": "1000",
+          "delegator_shares": "1000.000000000000000000",
+          "description": {
+            "moniker": "y3v63n",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "rate": "0.100000000000000000",
+            "max_rate": "0.200000000000000000",
+            "max_change_rate": "0.010000000000000000",
+            "update_time": "2019-09-14T04:06:50.925729572Z"
+          },
+          "min_self_delegation": "1"
+        }
+      ],
+      "delegations": [
+        {
+          "delegator_address": "cosmos1wkryl3myh94jfw48fx9dt68vs2xcg98r2h7rmv",
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "shares": "500.000000000000000000"
+        },
+        {
+          "delegator_address": "cosmos1klhwkm772kt92y8udt2cydc3m0en6n0tnc0e73",
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "shares": "10000.000000000000000000"
+        },
+        {
+          "delegator_address": "cosmos1cx5rrxmg4j68r3ys8r3h942e9hd4jelvlvjwqf",
+          "validator_address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "shares": "1000.000000000000000000"
+        }
+      ],
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": true
+    },
+    "distr": {
+      "fee_pool": {
+        "community_pool": [
+          {
+            "denom": "fox",
+            "amount": "11.852000000000000000"
+          }
+        ]
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "cosmosvalcons1lny5h82ltw59f9ke4pff6tnkehgwc7fkyhlgy5",
+      "outstanding_rewards": [
+        {
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "outstanding_rewards": [
+            {
+              "denom": "fox",
+              "amount": "414.148000000000000000"
+            }
+          ]
+        },
+        {
+          "validator_address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "outstanding_rewards": null
+        }
+      ],
+      "validator_accumulated_commissions": [
+        {
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "accumulated": [
+            {
+              "denom": "fox",
+              "amount": "51.940000000000000000"
+            }
+          ]
+        },
+        {
+          "validator_address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "accumulated": null
+        }
+      ],
+      "validator_historical_rewards": [
+        {
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 1
+          }
+        },
+        {
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "period": "5",
+          "rewards": {
+            "cumulative_reward_ratio": [
+              {
+                "denom": "fox",
+                "amount": "0.210504000000000000"
+              }
+            ],
+            "reference_count": 2
+          }
+        },
+        {
+          "validator_address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 2
+          }
+        }
+      ],
+      "validator_current_rewards": [
+        {
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "rewards": {
+            "rewards": [
+              {
+                "denom": "fox",
+                "amount": "151.704000000000000000"
+              }
+            ],
+            "period": "6"
+          }
+        },
+        {
+          "validator_address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "rewards": {
+            "rewards": null,
+            "period": "2"
+          }
+        }
+      ],
+      "delegator_starting_infos": [
+        {
+          "delegator_address": "cosmos1wkryl3myh94jfw48fx9dt68vs2xcg98r2h7rmv",
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "starting_info": {
+            "previous_period": "5",
+            "stake": "500.000000000000000000",
+            "height": "64829"
+          }
+        },
+        {
+          "delegator_address": "cosmos1klhwkm772kt92y8udt2cydc3m0en6n0tnc0e73",
+          "validator_address": "cosmosvaloper1klhwkm772kt92y8udt2cydc3m0en6n0tkvmvjz",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "1000.000000000000000000",
+            "height": "0"
+          }
+        },
+        {
+          "delegator_address": "cosmos1cx5rrxmg4j68r3ys8r3h942e9hd4jelvlvjwqf",
+          "validator_address": "cosmosvaloper1cx5rrxmg4j68r3ys8r3h942e9hd4jelv6cxmv6",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "1000.000000000000000000",
+            "height": "225517"
+          }
+        }
+      ],
+      "validator_slash_events": []
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": null,
+      "votes": null,
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "stake",
+            "amount": "10"
+          }
+        ],
+        "max_deposit_period": "172800000000000"
+      },
+      "voting_params": {
+        "voting_period": "172800000000000"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto": "0.334000000000000000"
+      }
+    },
+    "slashing": {
+      "params": {
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": {
+        "cosmosvalcons1ks5e5445xm24t70j0vfx03xn2a7x62q34njnrm": {
+          "start_height": "225517",
+          "index_offset": "0",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "cosmosvalcons1lny5h82ltw59f9ke4pff6tnkehgwc7fkyhlgy5": {
+          "start_height": "0",
+          "index_offset": "570557",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        }
+      },
+      "missed_blocks": {
+        "cosmosvalcons1ks5e5445xm24t70j0vfx03xn2a7x62q34njnrm": [],
+        "cosmosvalcons1lny5h82ltw59f9ke4pff6tnkehgwc7fkyhlgy5": []
+      }
+    },
+    "microtick": {
+      "params": {
+        "european_options": true,
+        "commission_quote_percent": "0.000500000000000000",
+        "commission_trade_fixed": "0.025000000000000000",
+        "commission_update_percent": "0.000050000000000000",
+        "commission_settle_fixed": "0.010000000000000000",
+        "settle_incentive": "0.025000000000000000",
+        "freeze_time": 30
+      },
+      "commission_pool": {
+        "denom": "fox",
+        "amount": "0.995964026324969311"
+      }
+    },
+    "gentxs": null
+  }
+}

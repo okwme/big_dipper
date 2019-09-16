@@ -106,6 +106,7 @@ Meteor.methods({
             return (status.result.sync_info.latest_block_height);
         }
         catch (e){
+            console.log(`Failed to query ${url}`)
             return 0;
         }
     },
@@ -145,6 +146,7 @@ Meteor.methods({
                 JSON.parse(response.content).result.forEach((validator) => validatorSet[validator.consensus_pubkey] = validator);
             }
             catch(e){
+                console.log(`Failed to query ${url}`)
                 console.log(e);
             }
 
@@ -155,6 +157,7 @@ Meteor.methods({
                 JSON.parse(response.content).result.forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
             }
             catch(e){
+                console.log(`Failed to query ${url}`)
                 console.log(e);
             }
 
@@ -165,6 +168,7 @@ Meteor.methods({
                 JSON.parse(response.content).result.forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
             }
             catch(e){
+                console.log(`Failed to query ${url}`)
                 console.log(e);
             }
             let totalValidators = Object.keys(validatorSet).length;
@@ -176,7 +180,6 @@ Meteor.methods({
                 let url = RPC+'/block?height=' + height;
                 let analyticsData = {};
 
-                console.log(url);
                 try{
                     const bulkValidators = Validators.rawCollection().initializeUnorderedBulkOp();
                     const bulkValidatorRecords = ValidatorRecords.rawCollection().initializeUnorderedBulkOp();
@@ -241,6 +244,7 @@ Meteor.methods({
                         let startGetValidatorsTime = new Date();
                         // update chain status
                         url = RPC+'/validators?height='+height;
+                        console.log(`Trying to query ${url}`)
                         response = HTTP.get(url);
                         console.log(url);
                         let validators = JSON.parse(response.content);
@@ -512,7 +516,7 @@ Meteor.methods({
                                 console.log('Checking all validators against db...')
                                 let dbValidators = {}
                                 Validators.find({}, {fields: {consensus_pubkey: 1, status: 1}}
-                                    ).forEach((v) => dbValidators[v.consensus_pubkey] = v.status)
+                                ).forEach((v) => dbValidators[v.consensus_pubkey] = v.status)
                                 Object.keys(validatorSet).forEach((conPubKey) => {
                                     let validatorData = validatorSet[conPubKey];
                                     // Active validators should have been updated in previous steps
@@ -538,6 +542,7 @@ Meteor.methods({
                                     }
                                 })
                             } catch (e){
+                                console.log('methods.js line 545')
                                 console.log(e)
                             }
                         }
@@ -550,9 +555,10 @@ Meteor.methods({
                                     let profileUrl =  getValidatorProfileUrl(validator.description.identity)
                                     if (profileUrl) {
                                         bulkValidators.find({address: validator.address}
-                                            ).upsert().updateOne({$set:{'profile_url':profileUrl}});
+                                        ).upsert().updateOne({$set:{'profile_url':profileUrl}});
                                     }
                                 } catch (e) {
+                                    console.log(`Failed to query ${validator.description.identity}`)
                                     console.log(e)
                                 }
                             })
@@ -670,6 +676,7 @@ Meteor.methods({
                     }
                 }
                 catch (e){
+                    console.log(`Failed to query ${url}`)
                     console.log(e);
                     SYNCING = false;
                     return "Stopped";

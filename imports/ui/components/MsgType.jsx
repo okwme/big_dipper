@@ -50,6 +50,11 @@ export const MsgType = (props) => {
     case "cosmos-sdk/IBCReceiveMsg":
         return <Badge color="dark"><T>messageTypes.IBCReceive</T></Badge>;
 
+    case "microtick/UpdateQuote":
+        return <Badge color="dark"><T>messageTypes.UpdateQuote</T></Badge>
+    case "microtick/SettleTrade":
+        return <Badge color="dark"><T>messageTypes.SettleTrade</T></Badge>
+
     default:
         return <Badge color="primary">{props.type}</Badge>;
     }
