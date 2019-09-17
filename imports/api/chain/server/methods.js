@@ -83,8 +83,10 @@ Meteor.methods({
                     let bonding = JSON.parse(response.content).result;
                     // chain.bondedTokens = bonding.bonded_tokens;
                     // chain.notBondedTokens = bonding.not_bonded_tokens;
-                    chainStates.bondedTokens = parseInt(bonding.bonded_tokens);
-                    chainStates.notBondedTokens = parseInt(bonding.not_bonded_tokens);
+                    if (bonding) {
+                        chainStates.bondedTokens = parseInt(bonding.bonded_tokens);
+                        chainStates.notBondedTokens = parseInt(bonding.not_bonded_tokens);
+                    }
                 }
                 catch(e){
                     console.log(`Failed to query ${url}`)
@@ -110,31 +112,31 @@ Meteor.methods({
                     console.log(e)
                 }
 
-                url = LCD + '/minting/inflation';
-                try{
-                    response = HTTP.get(url);
-                    let inflation = JSON.parse(response.content).result;
-                    if (inflation){
-                        chainStates.inflation = parseFloat(inflation)
-                    }
-                }
-                catch(e){
-                    console.log(`Failed to query ${url}`)
-                    console.log(e);
-                }
+                // url = LCD + '/minting/inflation';
+                // try{
+                //     response = HTTP.get(url);
+                //     let inflation = JSON.parse(response.content).result;
+                //     if (inflation){
+                //         chainStates.inflation = parseFloat(inflation)
+                //     }
+                // }
+                // catch(e){
+                //     console.log(`Failed to query ${url}`)
+                //     console.log(e);
+                // }
 
-                url = LCD + '/minting/annual-provisions';
-                try{
-                    response = HTTP.get(url);
-                    let provisions = JSON.parse(response.content);
-                    if (provisions){
-                        chainStates.annualProvisions = parseFloat(provisions)
-                    }
-                }
-                catch(e){
-                    console.log(`Failed to query ${url}`)
-                    console.log(e);
-                }
+                // url = LCD + '/minting/annual-provisions';
+                // try{
+                //     response = HTTP.get(url);
+                //     let provisions = JSON.parse(response.content);
+                //     if (provisions){
+                //         chainStates.annualProvisions = parseFloat(provisions)
+                //     }
+                // }
+                // catch(e){
+                //     console.log(`Failed to query ${url}`)
+                //     console.log(e);
+                // }
 
                 ChainStates.insert(chainStates);
             }

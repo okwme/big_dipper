@@ -1,7 +1,7 @@
 {
     "public":{
-        "chainName": "Cosmos Testnet",
-        "chainId": "{Chain ID}",
+        "chainName": "Microtick",
+        "chainId": "mtzone-sep-2019-2",
         "gtm": "{Add your Google Tag Manager ID here}",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
@@ -12,16 +12,16 @@
         "bech32PrefixValPub": "cosmosvaloperpub",
         "bech32PrefixConsAddr": "cosmosvalcons",
         "bech32PrefixConsPub": "cosmosvalconspub",
-        "stakingDenom": "ATOM",
-        "mintingDenom": "uatom",
-        "stakingFraction": 1000000,
+        "stakingDenom": "fox",
+        "mintingDenom": "fox",
+        "stakingFraction": 1,
         "gasPrice": 0.02,
-        "coingeckoId": "cosmos"
+        "coingeckoId": "fox"
     },
-    "genesisFile": "{Replace the address of the genesis file of the chain}",
+    "genesisFile": "https://raw.githubusercontent.com/okwme/big_dipper/master/public/genesis.json",
     "remote":{
-        "rpc":"https://gaia-seeds.interblock.io",
-        "lcd":"https://gaia-seeds.interblock.io:1317"
+        "rpc":"http://localhost:26657",
+        "lcd":"http://localhost:1317"
     },
     "debug": {
         "startTimer": true,

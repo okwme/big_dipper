@@ -40,7 +40,6 @@ export default class Activites extends Component {
     render(){
         // console.log(this.props);
         let msg = this.props.msg;
-        console.log(msg.type)
         switch (msg.type){
         // bank
         case "cosmos-sdk/MsgSend":
@@ -64,7 +63,7 @@ export default class Activites extends Component {
 
             // gov
         case "cosmos-sdk/MsgSubmitProposal":
-            return <p><Account address={msg.value.proposer} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <T>activities.withTitle</T> <Link to={"/proposals/"+this.props.events[2].attributes[0].value}>{msg.value.content.value.title}</Link><T>common.fullStop</T></p>
+            return <p><Account address={msg.value.proposer} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <T>activities.withTitle</T> <Link to={"/proposals/"+this.props.tags[2].value}>{msg.value.content.value.title}</Link><T>common.fullStop</T></p>
         case "cosmos-sdk/MsgDeposit":
             return <p><Account address={msg.value.depositor} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <em className="text-info">{msg.value.amount.map((amount,i) =>new Coin(amount.amount).toString()).join(', ')}</em> <T>activities.to</T> <Link to={"/proposals/"+msg.value.proposal_id}><T>proposals.proposal</T> {msg.value.proposal_id}</Link><T>common.fullStop</T></p>
         case "cosmos-sdk/MsgVote":
@@ -89,16 +88,12 @@ export default class Activites extends Component {
             return <MsgType type={msg.type} />
 
         case "microtick/SettleTrade":
-            console.log({msg})
-            // return <MsgType type={msg.type} />
-            // return <div>{JSON.stringify(msg.value)}</div>
             return <p><Account address={msg.value.Requester} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <T>common.fullStop</T></p>
         case "microtick/UpdateQuote":
             return <p><Account address={msg.value.Requester} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <em className="text-warning">{new Coin(msg.value.NewSpot.amount).toString(null, msg.value.NewSpot.denom)}</em> <T>activities.withA</T> <em className="text-warning">{new Coin(msg.value.NewPremium.amount).toString(null, msg.value.NewPremium.denom)}</em> <T>common.fullStop</T></p>
-            // return <MsgType type={msg.type} />
 
         default:
-            return <div>{JSON.stringify(msg.value)}</div>
+            return <div>{JSON.stringify(msg)}</div>
         }
     }
 }
