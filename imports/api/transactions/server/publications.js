@@ -20,15 +20,15 @@ publishComposite('transactions.list', function(limit = 30){
         ]
     }
 });
-
+// TODO: change these back to events with SDK v0.37.0
 publishComposite('transactions.validator', function(validatorAddress, delegatorAddress, limit=100){
     let query = {};
     if (validatorAddress && delegatorAddress){
-        query = {$or:[{"events.attributes.value":validatorAddress}, {"events.attributes.value":delegatorAddress}]}
+        query = {$or:[{"tags.value":validatorAddress}, {"tags.value":delegatorAddress}]}
     }
 
     if (!validatorAddress && delegatorAddress){
-        query = {"events.attributes.value":delegatorAddress}
+        query = {"tags.value":delegatorAddress}
     }
 
     return {

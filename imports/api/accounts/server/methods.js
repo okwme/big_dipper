@@ -175,8 +175,8 @@ Meteor.methods({
 
         try{
             let unbondings = HTTP.get(url);
-            if (unbondings.statusCode == 200 && JSON.parse(unbondings.content)){
-                unbondings = JSON.parse(unbondings.content).result;
+            if (unbondings.statusCode == 200){
+                unbondings = JSON.parse(unbondings.content) && JSON.parse(unbondings.content).result;
                 return unbondings;
             };
         }
