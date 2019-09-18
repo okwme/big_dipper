@@ -89,16 +89,12 @@ export default class Activites extends Component {
             return <MsgType type={msg.type} />
 
         case "microtick/SettleTrade":
-            console.log({msg})
-            // return <MsgType type={msg.type} />
-            // return <div>{JSON.stringify(msg.value)}</div>
             return <p><Account address={msg.value.Requester} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <T>common.fullStop</T></p>
         case "microtick/UpdateQuote":
             return <p><Account address={msg.value.Requester} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <em className="text-warning">{new Coin(msg.value.NewSpot.amount).toString(null, msg.value.NewSpot.denom)}</em> <T>activities.withA</T> <em className="text-warning">{new Coin(msg.value.NewPremium.amount).toString(null, msg.value.NewPremium.denom)}</em> <T>common.fullStop</T></p>
-            // return <MsgType type={msg.type} />
 
         default:
-            return <div>{JSON.stringify(msg.value)}</div>
+            return <div>{JSON.stringify(msg)}</div>
         }
     }
 }

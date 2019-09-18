@@ -40,7 +40,9 @@ export default BlockContainer = withTracker((props) => {
         transferTxs: transactionsExist ? Transactions.find({
             $or: [
                 {"tx.value.msg.type":"cosmos-sdk/MsgSend"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgMultiSend"}
+                {"tx.value.msg.type":"cosmos-sdk/MsgMultiSend"},
+                // {"tx.value.msg": {$elemMatch : {type:"cosmos-sdk/MsgSend"}}},
+                // {"tx.value.msg": {$elemMatch : {type:"cosmos-sdk/MsgMultiSend"}}}
             ]
         }).fetch() : {},
         stakingTxs: transactionsExist ? Transactions.find({

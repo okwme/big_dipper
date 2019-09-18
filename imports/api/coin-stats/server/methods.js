@@ -16,8 +16,8 @@ Meteor.methods({
                 if (response.statusCode == 200){
                     // console.log(JSON.parse(response.content));
                     let data = JSON.parse(response.content);
-                    data = data[coinId];
-                    // console.log(coinStats);
+                    data = data[coinId] || {"fox":{"usd":0,"usd_market_cap":0,"usd_24h_vol":0,"usd_24h_change":0,"last_updated_at":9999999999}};
+
                     return CoinStats.upsert({last_updated_at:data.last_updated_at}, {$set:data});
                 }
             }

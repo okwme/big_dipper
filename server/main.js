@@ -121,7 +121,7 @@ aggregateMinutely = () =>{
             console.log("get coin stats error: "+error);
         }
         else{
-            console.log("get coin stats ok: "+result)
+            console.log("get coin stats ok: "+JSON.stringify(result))
         }
     });
 }

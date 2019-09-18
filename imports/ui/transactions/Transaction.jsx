@@ -29,6 +29,7 @@ export default class Transaction extends Component{
             if (this.props.transactionExist){
                 // console.log(this.props.transaction);
                 let tx = this.props.transaction;
+                console.log({tx})
                 return <Container id="transaction">
                     <Helmet>
                         <title>Transaction {tx.txhash} on Cosmos Hub | The Big Dipper</title>

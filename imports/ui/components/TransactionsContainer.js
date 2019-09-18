@@ -16,23 +16,32 @@ export default TransactionsContainer = withTracker((props) => {
         transactions = Transactions.find({}, {sort:{height:-1}});
 
         if (Meteor.isServer){
+            console.log('Meteor.isServer === true')
             loading = false;
             transactionsExist = !!transactions;
         }
         else{
+            console.log('Meteor.isServer === false')
             transactionsExist = !loading && !!transactions;
         }
     }
 
+    console.log({transactionsExist})
+    let transferTxs = Transactions.find({
+        $or: [
+            {"tx.value.msg.type":"cosmos-sdk/MsgSend"},
+            {"tx.value.msg.type":"cosmos-sdk/MsgMultiSend"}
+        ]
+    }).fetch()
+    async function foo() {
+        console.log({Transactions})
+        console.log(await transferTxs)
+    }
+    foo()
     return {
         loading,
         transactionsExist,
-        transferTxs: transactionsExist ? Transactions.find({
-            $or: [
-                {"tx.value.msg.type":"cosmos-sdk/MsgSend"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgMultiSend"}
-            ]
-        }).fetch() : {},
+        transferTxs: transactionsExist ? transferTxs : {},
         stakingTxs: transactionsExist ? Transactions.find({
             $or: [
                 {"tx.value.msg.type":"cosmos-sdk/MsgCreateValidator"},

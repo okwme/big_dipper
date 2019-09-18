@@ -143,7 +143,7 @@ Meteor.methods({
 
             try{
                 response = HTTP.get(url);
-                JSON.parse(response.content).result.forEach((validator) => validatorSet[validator.consensus_pubkey] = validator);
+                (JSON.parse(response.content).result || []).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator);
             }
             catch(e){
                 console.log(`Failed to query ${url}`)
@@ -154,7 +154,7 @@ Meteor.methods({
 
             try{
                 response = HTTP.get(url);
-                JSON.parse(response.content).result.forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
+                (JSON.parse(response.content).result || []).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
             }
             catch(e){
                 console.log(`Failed to query ${url}`)
@@ -165,7 +165,7 @@ Meteor.methods({
 
             try{
                 response = HTTP.get(url);
-                JSON.parse(response.content).result.forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
+                (JSON.parse(response.content).result || []).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
             }
             catch(e){
                 console.log(`Failed to query ${url}`)

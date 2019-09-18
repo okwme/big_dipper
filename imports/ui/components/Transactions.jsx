@@ -8,9 +8,10 @@ const T = i18n.createComponent();
 export default class ValidatorTransactions extends Component{
     constructor(props){
         super(props);
+        console.log({props})
         this.state = {
-            transferTxs: this.props.slashingTxs,
-            stakingTxs: this.props.slashingTxs,
+            transferTxs: this.props.transferTxs,
+            stakingTxs: this.props.stakingTxs,
             distributionTxs: {},
             governanceTxs: {},
             slashingTxs: {},
