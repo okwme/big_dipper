@@ -15,6 +15,8 @@ autoformat = (value) => {
     return numbro(value).format(formatter)
 }
 
+console.log(Meteor)
+
 export default class Coin {
 	static StakingDenom = Meteor.settings.public.stakingDenom.toLowerCase();
 	static MintingDenom = Meteor.settings.public.mintingDenom.toLowerCase();

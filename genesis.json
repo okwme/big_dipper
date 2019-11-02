@@ -1,0 +1,234 @@
+{
+  "genesis_time": "2019-11-02T05:30:19.245109667Z",
+  "chain_id": "sf-blockchain-week-1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age": "100000"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    }
+  },
+  "app_hash": "",
+  "app_state": {
+    "accounts": [
+      {
+        "address": "cosmos14r84k32l72zykdd5ngy3xncf69e5an2ah9j20m",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "10000000.000000000000000000"
+        },
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1rdwpzyumxd2vhxp5qawz3pl4ppszplzy928e5d",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "10000.000000000000000000"
+        },
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1kwkllsq70dgcq78xrwra3nvnzrgj30tusjj957",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "10000000.000000000000000000"
+        },
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1g365f2ccrszmah3vjj0ktca6hlf2xwtmq240z9",
+        "numquotes": 0,
+        "numtrades": 0,
+        "balance": {
+          "denom": "fox",
+          "amount": "50000.000000000000000000"
+        },
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": null,
+        "delegated_free": null,
+        "delegated_vesting": null,
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "auth": {
+      "collected_fees": null,
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      }
+    },
+    "bank": {
+      "send_enabled": true
+    },
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "30070000",
+        "bonded_tokens": "0"
+      },
+      "params": {
+        "unbonding_time": "259200000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "fox"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": null,
+      "validators": null,
+      "delegations": null,
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": false
+    },
+    "distr": {
+      "fee_pool": {
+        "community_pool": null
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": null,
+      "previous_proposer": "",
+      "outstanding_rewards": null,
+      "validator_accumulated_commissions": null,
+      "validator_historical_rewards": null,
+      "validator_current_rewards": null,
+      "delegator_starting_infos": null,
+      "validator_slash_events": null
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": null,
+      "votes": null,
+      "proposals": null,
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "stake",
+            "amount": "10"
+          }
+        ],
+        "max_deposit_period": "172800000000000"
+      },
+      "voting_params": {
+        "voting_period": "172800000000000"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto": "0.334000000000000000"
+      }
+    },
+    "slashing": {
+      "params": {
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": {},
+      "missed_blocks": {}
+    },
+    "microtick": {
+      "params": {
+        "european_options": true,
+        "commission_quote_percent": "0.000500000000000000",
+        "commission_trade_fixed": "0.025000000000000000",
+        "commission_update_percent": "0.000050000000000000",
+        "commission_settle_fixed": "0.010000000000000000",
+        "settle_incentive": "0.025000000000000000",
+        "freeze_time": 30
+      },
+      "commission_pool": {
+        "denom": "fox",
+        "amount": "0.000000000000000000"
+      }
+    },
+    "gentxs": [
+      {
+        "type": "auth/StdTx",
+        "value": {
+          "msg": [
+            {
+              "type": "cosmos-sdk/MsgCreateValidator",
+              "value": {
+                "description": {
+                  "moniker": "localhost",
+                  "identity": "",
+                  "website": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "cosmos1rdwpzyumxd2vhxp5qawz3pl4ppszplzy928e5d",
+                "validator_address": "cosmosvaloper1rdwpzyumxd2vhxp5qawz3pl4ppszplzyq7nvc7",
+                "pubkey": "cosmosvalconspub1zcjduepq0fhmgaw3lzcgwv8qlre7qsykntukn54sgllrh7nkcan3auxm5ywqvscgyq",
+                "value": {
+                  "denom": "fox",
+                  "amount": "1000"
+                }
+              }
+            }
+          ],
+          "fee": {
+            "amount": null,
+            "gas": "200000"
+          },
+          "signatures": [
+            {
+              "pub_key": {
+                "type": "tendermint/PubKeySecp256k1",
+                "value": "Arri7yg1UKO+FO0/QDof2baP3TSErn27r6Rtq2E/j0R1"
+              },
+              "signature": "TBBGM6WfBzAoWPHnJ8RS/37QKaYmlvnGbPv8ovRby2QNclfKLQpdDz+BFKUVMIIshqc9rrtIH80rzbgIWHdeAw=="
+            }
+          ],
+          "memo": "167d20170362574b796c97b649d2884676a66b54@45.56.94.46:26656"
+        }
+      }
+    ]
+  }
+}
